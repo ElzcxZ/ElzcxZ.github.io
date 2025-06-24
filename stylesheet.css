@@ -1,0 +1,65 @@
+/* Reset */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar{
+    position: relative; /* relative to allow absolute positioning of buttons */
+    display: flex;
+    height: 12rem;
+    min-height: 80px;
+    justify-content: space-between; /* logo left, butons right */
+    align-items: flex-start; /* align items to the top */
+    background-color: #000043;
+    border-bottom: #DBC98C solid 4px;
+    z-index: 10; /* ensure navbar is above other content */
+}
+
+/* Logo */
+.logo a img{
+    height: 8rem;
+    width: auto;
+}
+.logo{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 2rem;
+}
+
+.button{
+    width: 8rem;
+    font-size: 1.5rem;
+    background-color: #beae79;
+    padding: 0.3rem 0;
+    border: #DBC98C solid 4px;
+}
+
+.main-buttons{
+    position: absolute;
+    bottom: -4px;
+    right: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.utility-buttons{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.utility-buttons a{
+    border-radius: 10px;
+}
