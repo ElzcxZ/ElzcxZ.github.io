@@ -21,7 +21,6 @@ body{
     position: relative; /* relative to allow absolute positioning of buttons */
     display: flex;
     height: 12rem;
-    min-height: 80px;
     justify-content: space-between; /* logo left, butons right */
     align-items: flex-start; /* align items to the top */
     z-index: 10; /* ensure navbar is above other content */
@@ -109,4 +108,44 @@ body{
 .bg img{ 
     width: 100vw;
     max-width: 100%;
+}
+
+
+
+/* Footer */
+footer{
+    position: fixed;
+    background-color: #000043;
+    padding: 1rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    border-top: #DBC98C solid 4px;
+    width: 100vw;
+    bottom: 0;
+}
+
+/* smaller logo */
+footer .logo a img{
+    height: 6rem;
+}
+
+/* 2x2 grid */
+.footer-grid{
+    display: grid;
+    grid-template-columns: 2.5rem 2.5rem;
+    grid-template-rows: 2.5rem 2.5rem;
+    gap: 1rem;
+}
+
+.grid-icon{
+    filter: invert(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-icon img{
+    width: 2.5rem;
+    height: 2.5rem;
 }
