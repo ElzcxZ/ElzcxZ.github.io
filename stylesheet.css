@@ -70,6 +70,9 @@ body{
     padding: 0.3rem 0;
     border: #DBC98C solid 4px;
 }
+.button:hover{
+    background-color: #DBC98C;
+}
 
 .main-buttons{
     position: absolute;
@@ -148,4 +151,59 @@ footer .logo a img{
 .grid-icon img{
     width: 2.5rem;
     height: 2.5rem;
+}
+
+
+
+/* Container for the Dropdown Section */
+.dropdown-bar{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding-top: 1rem;
+    padding-left: 2rem;
+    z-index: 5; /* ensure dropdown is above other content */
+}
+
+/* Dropdown Wrapper */
+.dropdown{
+    position: relative; /* relative to allow absolute positioning of dropdown content */
+    display: flex;
+}
+
+/* Dropdown Buttons */
+.dropdown-button{
+    background-color: #beae79;
+    border: none;
+}
+
+/* Dropdown Content (Initially Hidden) */
+.dropdown-content{
+    display: none; /* hidden by default */
+    position: absolute; /* absolute positioning to appear below the button */
+    top: 100%;
+    left: -1rem;
+    background-color: #beae79;
+    border: 2px solid #DBC98C;
+    width: 10rem; /* minimum width for dropdown */
+    flex-direction: column; /* stack items vertically */
+    z-index: 10; /* ensure dropdown is above other content */
+}
+
+.dropdown-content a {
+    padding: 0.6rem 0;
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 1rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #DBC98C;
+    color: #000043;
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
 }
