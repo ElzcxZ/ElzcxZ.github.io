@@ -12,6 +12,10 @@ a{
     text-align: center;
 }
 
+body{
+    overflow: hidden; /* prevent scrolling */
+}
+
 /* Navbar */
 .navbar{
     position: relative; /* relative to allow absolute positioning of buttons */
@@ -20,10 +24,33 @@ a{
     min-height: 80px;
     justify-content: space-between; /* logo left, butons right */
     align-items: flex-start; /* align items to the top */
-    background-color: #000043;
-    border-bottom: #DBC98C solid 4px;
     z-index: 10; /* ensure navbar is above other content */
 }
+
+/* Home Page Navbar BG */
+.navbar-home .navbg{
+    position: absolute;
+    top: 0;
+    background-color: #000043;
+    z-index: -1; /* background behind navbar contents */
+    border-bottom: #DBC98C solid 4px;
+    height: 100%;
+}
+.navbar-home #navbg-left{
+    left: 0;
+    width: calc(100% - 30rem); /* full width minus the width of the buttons */
+}
+.navbar-home #navbg-top{
+    right: 22rem;
+    width: 8rem; /* width of the buttons */
+    height: calc(100% - 2.6rem); /* full height minus the height of the buttons */
+}
+.navbar-home #navbg-right{
+    right: 0;
+    width: 22rem; /* width of the buttons */
+}
+
+
 
 /* Logo */
 .logo a img{
@@ -36,6 +63,7 @@ a{
     margin-left: 2rem;
 }
 
+/* Buttons */
 .button{
     width: 8rem;
     font-size: 1.5rem;
@@ -46,7 +74,7 @@ a{
 
 .main-buttons{
     position: absolute;
-    bottom: -4px;
+    bottom: 0;
     right: 2rem;
     display: flex;
     gap: 2rem;
@@ -62,4 +90,23 @@ a{
 
 .utility-buttons a{
     border-radius: 10px;
+}
+
+.current-page-button{
+    border-bottom: none;
+    background-color: rgba(131, 120, 84, 0.5);
+}
+
+
+
+/* Background */
+.bg{
+    position: fixed;
+    bottom: 5rem;
+    z-index: -1; /* background behind everything */
+}
+
+.bg img{ 
+    width: 100vw;
+    max-width: 100%;
 }
