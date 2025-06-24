@@ -206,4 +206,36 @@ footer .logo a img{
 .dropdown:hover .dropdown-content {
     display: flex;
 }
+
+
+
+/* News/Events Boxes */
+.main-home{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 4vw;
+    position: fixed;
+    width: 100vw;
+    bottom: 9rem;
+}
+
+.box-home{
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 2.5vw;
+}
+
+.box-home a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #beae79;
+    padding: 1rem;
+    width: 15vw;
+    height: 8vw;
+    border-radius: 1rem;
+}
+.box-home a:hover{
+    background-color: #DBC98C;
 }
