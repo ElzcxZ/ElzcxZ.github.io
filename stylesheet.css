@@ -49,6 +49,51 @@ body{
     width: 22rem; /* width of the buttons */
 }
 
+/* Courses Page Navbar BG */
+.navbar-courses .navbg{
+    position: absolute;
+    top: 0;
+    background-color: #000043;
+    z-index: -1; /* background behind navbar contents */
+    border-bottom: #DBC98C solid 4px;
+    height: 100%;
+}
+.navbar-courses #navbg-left{
+    left: 0;
+    width: calc(100% - 20rem); /* full width minus the width of the buttons */
+}
+.navbar-courses #navbg-top{
+    right: 12rem;
+    width: 8rem; /* width of the buttons */
+    height: calc(100% - 2.6rem); /* full height minus the height of the buttons */
+}
+.navbar-courses #navbg-right{
+    right: 0;
+    width: 12rem; /* width of the buttons */
+}
+
+/* Courses Page Navbar BG */
+.navbar-contact .navbg{
+    position: absolute;
+    top: 0;
+    background-color: #000043;
+    z-index: -1; /* background behind navbar contents */
+    border-bottom: #DBC98C solid 4px;
+    height: 100%;
+}
+.navbar-contact #navbg-left{
+    left: 0;
+    width: calc(100% - 10rem); /* full width minus the width of the buttons */
+}
+.navbar-contact #navbg-top{
+    right: 2rem;
+    width: 8rem; /* width of the buttons */
+    height: calc(100% - 2.6rem); /* full height minus the height of the buttons */
+}
+.navbar-contact #navbg-right{
+    right: 0;
+    width: 2rem; /* width of the buttons */
+}
 
 
 /* Logo */
