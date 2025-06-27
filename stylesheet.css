@@ -21,7 +21,7 @@ h1{
 
 header{
     width: 100%;
-    height: 8rem;
+    height: 15vh;
     background-color: rgba(131, 120, 84, 0.5);
     color: white;
     border-bottom: #DBC98C solid 4px;
@@ -38,7 +38,7 @@ body{
 .navbar{
     position: relative; /* relative to allow absolute positioning of buttons */
     display: flex;
-    height: 12rem;
+    height: 9rem;
     justify-content: space-between; /* logo left, butons right */
     align-items: flex-start; /* align items to the top */
     z-index: 10; /* ensure navbar is above other content */
@@ -132,6 +132,7 @@ body{
     background-color: #beae79;
     padding: 0.3rem 0;
     border: #DBC98C solid 4px;
+    transition: background-color 0.2s ease;
 }
 .button:hover{
     background-color: #DBC98C;
@@ -165,7 +166,7 @@ body{
 /* Background */
 .bg{
     position: fixed;
-    bottom: 5rem;
+    bottom: 6rem;
     z-index: -1; /* background behind everything */
 }
 
@@ -193,8 +194,9 @@ body{
 footer{
     position: fixed;
     background-color: #000043;
-    padding: 1rem;
+    padding: 2vh;
     height: 8rem;
+    max-height: 15vh;
     display: flex;
     justify-content: space-between;
     border-top: #DBC98C solid 4px;
@@ -209,10 +211,13 @@ footer .logo a img{
 
 /* 2x2 grid */
 .footer-grid{
+    /* position: fixed; */
     display: grid;
-    grid-template-columns: 2.5rem 2.5rem;
-    grid-template-rows: 2.5rem 2.5rem;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1vh;
+    right: 0;
+    width: fit-content;
+    height: fit-content;
 }
 
 .grid-icon{
@@ -220,11 +225,17 @@ footer .logo a img{
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.2s ease;
 }
 
 .grid-icon img{
     width: 2.5rem;
     height: 2.5rem;
+    max-width: 5vh;
+    max-height: 5vh;
+}
+.grid-icon:hover{
+    transform: scale(1.1);
 }
 
 
@@ -247,21 +258,26 @@ footer .logo a img{
 
 /* Dropdown Buttons */
 .dropdown-button{
+    position: relative;
     background-color: #beae79;
     border: none;
+    box-shadow: 0 0 0 0 #beae79, 0 0 0 0 #beae79; /* no shadow by default */
+    transition: box-shadow 0.2s ease, border-top-left-radius 0.2s ease, border-top-right-radius 0.2s ease;
 }
 
 /* Dropdown Content (Initially Hidden) */
 .dropdown-content{
-    display: none; /* hidden by default */
+    display: flex;
+    max-height: 0;
+    overflow: hidden;
     position: absolute; /* absolute positioning to appear below the button */
     top: 100%;
     left: -1rem;
     background-color: #beae79;
-    border: 2px solid #DBC98C;
-    width: 10rem; /* minimum width for dropdown */
+    width: 10rem;
     flex-direction: column; /* stack items vertically */
     z-index: 10; /* ensure dropdown is above other content */
+    transition: max-height 0.6s ease 0.1s;
 }
 
 .dropdown-content a {
@@ -270,6 +286,7 @@ footer .logo a img{
     color: white;
     display: block;
     font-size: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-content a:hover {
@@ -279,8 +296,15 @@ footer .logo a img{
 
 .dropdown:hover .dropdown-content {
     display: flex;
+    max-height: 1000px;
 }
 
+.dropdown:hover .dropdown-button {
+    background-color: #DBC98C; /* change button color on hover */
+    box-shadow: -1rem 0 0 0 #DBC98C, 1rem 0 0 0 #DBC98C; /* add shadow to indicate dropdown is open */
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
 
 
 /* News/Events Boxes */
@@ -314,3 +338,30 @@ footer .logo a img{
     background-color: #DBC98C;
 }
 /* End of Home Page */
+
+
+/* Institute List Page */
+.main-list{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* repeat 1fr 5 times (1 equal fraction of a space) */
+    gap: 1rem;
+    padding: 2rem;
+    position: fixed;
+    width: 100vw;
+}
+
+.institute-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 15vw;
+    height: 15vh;
+    font-size: calc(1vw + 1vh);
+    text-wrap: wrap;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.institute-box:hover{
+    transform: scale(1.05);
+}
