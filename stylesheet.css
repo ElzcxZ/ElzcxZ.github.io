@@ -32,6 +32,7 @@ header{
 
 body{
     overflow: hidden; /* prevent scrolling */
+    background-color: #DBC98C;
 }
 
 /* Navbar */
@@ -165,8 +166,8 @@ body{
 
 /* Background */
 .bg{
-    position: fixed;
-    bottom: 6rem;
+    position: absolute;
+    bottom: 10vh;
     z-index: -1; /* background behind everything */
 }
 
@@ -182,31 +183,32 @@ footer{
     position: fixed;
     background-color: #000043;
     padding: 2vh;
-    height: 8rem;
+    height: 13vh;
     max-height: 15vh;
     display: flex;
     justify-content: space-between;
-    border-top: #DBC98C solid 4px;
+    border-top: #DBC98C solid 0.5vh;
     width: 100vw;
     bottom: 0;
 }
 
 /* smaller logo */
 footer .logo a img{
-    height: 6rem;
+    height: 10vh;
+}
+
+footer .logo a{
+    position: absolute;
+    top: 2vh;
+    left: 5vh;
 }
 
 /* 2x2 grid */
 .footer-grid{
-    position: fixed;
     display: grid;
     grid-template-columns: repeat(2, 4vh);
     gap: 1vh;
     column-gap: 2vh;
-    right: 2vh;
-    bottom: 1vh;
-    width: fit-content;
-    height: fit-content;
 }
 
 .grid-icon{
@@ -215,13 +217,13 @@ footer .logo a img{
     justify-content: center;
     align-items: center;
     transition: transform 0.2s ease;
+    height: 4vh;
+    width: 4vh;
 }
 
 .grid-icon img{
-    width: 2.5rem;
-    height: 2.5rem;
-    max-width: 5vh;
-    max-height: 5vh;
+    width: 4vh;
+    height: 4vh;
 }
 .grid-icon:hover{
     transform: scale(1.1);
@@ -304,7 +306,7 @@ footer .logo a img{
     gap: 4vw;
     position: fixed;
     width: 100vw;
-    bottom: 9rem;
+    bottom: 15vh;
 }
 
 .box-home{
@@ -415,4 +417,6 @@ footer .logo a img{
     bottom: 1rem;
     width: 20vh;
     font-size: 3vh;
+}
+/*  */
 }
