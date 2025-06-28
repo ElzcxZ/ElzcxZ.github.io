@@ -459,7 +459,7 @@ footer .logo a{
     padding: 1.5rem;
     border: #DBC98C solid 0.5rem;
     width: 75vh;
-    margin-top: 2rem;
+    margin-top: -2rem;
     margin-right: 25rem;
     z-index: 12;
     height: fit-content;
